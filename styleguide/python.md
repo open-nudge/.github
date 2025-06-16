@@ -7,7 +7,7 @@ SPDX-License-Identifier: Apache-2.0
 
 # Python styleguide
 
-> ![CAUTION]
+> [!CAUTION]
 > Rules exist, but so do exceptions. Always evaluate each case individually.
 
 ## Table of contents
@@ -46,7 +46,7 @@ Refer to these guides first:
 PEP8 is our default style guide. Minor deviations are allowed,
 but significant departures should be considered errors.
 
-> ![CAUTION]
+> [!CAUTION]
 > Skim through PEP8 before proceeding.
 
 ## Google style guide
@@ -55,7 +55,7 @@ Most principles apply, with these modifications:
 
 ### Linting
 
-> ![NOTE]
+> [!NOTE]
 > Linting is automated via [opentemplate](https://github.com/open-nudge/opentemplate).
 
 The goal is to improve linting coverage in order to automate
@@ -63,7 +63,7 @@ as many styleguide rules as possible.
 
 ### Imports
 
-> ![NOTE]
+> [!NOTE]
 > Prefer `import X` over `from X import Y`.
 
 __Reasons:__
@@ -75,7 +75,7 @@ Use `import X as Y` only for well-known aliases (e.g., `import pandas as pd`).
 
 ### Packages
 
-> ![NOTE]
+> [!NOTE]
 > Use `from <PATH> import <MODULE>` only for internal modules.
 
 __Pros:__
@@ -92,7 +92,7 @@ __Pros:__
 
 ### Nested classes and functions
 
-> ![NOTE]
+> [!NOTE]
 > Avoid nested classes and functions.
 
 Instead, use:
@@ -107,7 +107,7 @@ __Reasons:__
 
 ### Comprehensions and generators
 
-> ![NOTE]
+> [!NOTE]
 > Limit nesting to one level and basic functions.
 
 Allowed:
@@ -120,7 +120,7 @@ result = [transform(x) for x in iterable if predicate(x)]
 
 ### Generators
 
-> ![NOTE]
+> [!NOTE]
 > Prefer generators over lists whenever possible.
 
 __Pros:__
@@ -130,14 +130,14 @@ __Pros:__
 
 ### Lambda functions
 
-> ![NOTE]
+> [!NOTE]
 > Use only for basic expressions (≤40 characters).
 
 Prefer [operator module](https://docs.python.org/3/library/operator.html) when applicable.
 
 ### Properties
 
-> ![NOTE]
+> [!NOTE]
 > Avoid setters and getters; use native properties when possible.
 
 Instead:
@@ -147,7 +147,7 @@ Instead:
 
 ### True/False evaluations
 
-> ![NOTE]
+> [!NOTE]
 > Prefer `None` over empty lists/tuples/dicts.
 
 __Pros:__
@@ -157,7 +157,7 @@ __Pros:__
 
 ### Lexical scoping
 
-> ![NOTE]
+> [!NOTE]
 > Avoid lexical scoping.
 
 Sometimes they are necessary, but you should probably pass them to the
@@ -165,7 +165,7 @@ function directly.
 
 ### Decorators and context managers
 
-> ![NOTE]
+> [!NOTE]
 > Encouraged but must be well-implemented.
 
 __Common use cases:__
@@ -181,19 +181,19 @@ __Remember:__
 
 ### Class and Static Methods
 
-> ![NOTE]
+> [!NOTE]
 > Favor object encapsulation over class methods.
 
 Class methods are useful for multiple constructors
 (`from_csv`, `from_json`).
 
-> ![CAUTION]
+> [!CAUTION]
 > Avoid static methods unless overriding is __definitely__
 > never required.
 
 ### Power Features
 
-> ![NOTE]
+> [!NOTE]
 > Use metaclasses and attribute overrides (`__getattr__`, `__setattr__`)
 > only if absolutely necessary.
 
@@ -201,7 +201,7 @@ Carefully weigh maintainability, complexity, and readability.
 
 ### Type Annotations
 
-> ![NOTE]
+> [!NOTE]
 > Annotate everything except `self` and `cls`.
 
 __Best practices:__

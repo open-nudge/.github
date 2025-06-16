@@ -7,7 +7,7 @@ SPDX-License-Identifier: Apache-2.0
 
 # GitHub Actions
 
-> ![CAUTION]
+> [!CAUTION]
 > Rules exist, but so do exceptions. Always evaluate each case individually.
 
 ## Table of contents
@@ -52,35 +52,35 @@ Use checkers/linters to automatically verify your file, suggested ones:
     checks
 - [adrienverge/yamllint](https://github.com/adrienverge/yamllint) - YAML style
 
-> ![CAUTION]
+> [!CAUTION]
 > Automatic checks __may not be described__ in this document
 
 ## Naming
 
-> ![NOTE]
+> [!NOTE]
 > Use dash-case (hyphen, lower-case) __for every programmatic name__
 > (e.g. file name, `id` field, job identifier etc.)
 
 ### Job casing
 
-> ![NOTE]
+> [!NOTE]
 > __Always__ use "Upper Case Job Names" (each word capitalized)
 
 ### Workflow name
 
-> ![NOTE]
+> [!NOTE]
 > __Always__ specify the top-level workflow name,
 > __usually the same as the name of the file__ (but in a human-readable manner)
 
 ### Job name
 
-> ![NOTE]
+> [!NOTE]
 > Specify explicitly `name` field and
 > __name it in the same <job-id>__ (but in a human-readable manner)
 
 #### Example 1
 
-> ![CAUTION]
+> [!CAUTION]
 > This example incorporates other naming rules as well
 
 ```yaml
@@ -98,19 +98,19 @@ jobs:
 
 ### Single-job workflows
 
-> ![NOTE]
+> [!NOTE]
 > If there is a single job in the workflow file
 > __name it in the same way as the workflow-wide `name` field__
 
 ### Steps naming
 
-> ![NOTE]
+> [!NOTE]
 > __Always__ use `name` field for each `step`.
 > Capitalize only the first letter of the `name`
 
 ### Example 2
 
-> ![CAUTION]
+> [!CAUTION]
 > This example incorporates other naming rules as well
 
 ```yaml
@@ -132,7 +132,7 @@ jobs:
 
 ### Strings
 
-> ![NOTE]
+> [!NOTE]
 > __Always__ use double quotation marks for __every__ string
 > field in YAML unless using `>`/`>-`/`|`/`|-` for multiline strings.
 
@@ -141,7 +141,7 @@ as booleans in some YAML versions.
 
 ## Concurrency
 
-> ![NOTE]
+> [!NOTE]
 > Specify `concurrency` explicitly on a global or per-job level
 > depending on the use case
 
@@ -150,7 +150,7 @@ __which is likely rarely a case__.
 
 ### Use github.workflow_ref instead of github.workflow
 
-> ![NOTE]
+> [!NOTE]
 > Use `${{ github.workflow_ref }}` instead of `${{ github.workflow }}`
 > as it is `name` parameter independent
 
@@ -161,7 +161,7 @@ they happen to be equal.
 
 ### Top-level
 
-> ![NOTE]
+> [!NOTE]
 > Specify top-level empty permissions (`permissions: {}`)
 
 Minimizes the likelihood of excessive permissions given
@@ -169,7 +169,7 @@ to any job on a level below.
 
 ### Job-level
 
-> ![NOTE]
+> [!NOTE]
 > Specify minimal job-level permissions
 
 ### Example
@@ -187,7 +187,7 @@ jobs:
 
 ## Conditionals
 
-> ![NOTE]
+> [!NOTE]
 > Every `if` conditional should be a multliline string expression
 > specified via `>` and should omit `${{ }}` blocks.
 
@@ -195,7 +195,7 @@ Easier to spot and read
 
 ## Run
 
-> ![NOTE]
+> [!NOTE]
 > Every `run` should be a multliline string expression
 > specified via `>` (single command) or `|` (multiple commands)
 
@@ -203,13 +203,13 @@ Easier to spot and read
 
 ## Reusable workflows
 
-> ![NOTE]
+> [!NOTE]
 > Should be used as a refactoring tool and for security
 > purposes (e.g. [SLSA Level 3](https://slsa.dev/) compatible workflows)
 
 ### File naming
 
-> ![NOTE]
+> [!NOTE]
 > Every reusable workflow should have a `-reusable` postfix
 
 For example `check-security-reusable.yml`
@@ -218,7 +218,7 @@ For example `check-security-reusable.yml`
 
 ### Third-party
 
-> ![CAUTION]
+> [!CAUTION]
 > __Do not use custom third-party actions__ (unless they are ocming
 > from trusted source)
 
@@ -233,14 +233,14 @@ Such approach:
 
 ### Same organization
 
-> ![NOTE]
+> [!NOTE]
 > Use them as a refactoring tool and to share common functionality
 
 ### [actions/checkout](https://github.com/actions/checkout)
 
 #### persist-credentials
 
-> ![NOTE]
+> [!NOTE]
 > Set to `false` unless you want to `push` something to the repository
 
 Does not leave the unnecessary credentials to be used by some `run`
@@ -248,37 +248,37 @@ or custom action
 
 #### sparse-checkout
 
-> ![NOTE]
+> [!NOTE]
 > Specify data you want to checkout instead of checking out the full repository
 
 - Allows the repository to grow with similar checkout time
 - Action/run does not have to work with all the files
 
-> ![CAUTION]
+> [!CAUTION]
 > Especially important for large `git` repositories
 
 #### sparse-checkout-cone-mode
 
-> ![NOTE]
+> [!NOTE]
 > If possible, leave `sparse-checkout-cone-mode` to `true`
 
 This sparse checkout focuses on __folders__ instead of files,
 but should be significantly faster, especially if there are many patterns
 to specify in `sparse-checkout`.
 
-> ![CAUTION]
+> [!CAUTION]
 > It is also scheduled for depreciation due to performance issues
 
 #### fetch-depth
 
-> ![NOTE]
+> [!NOTE]
 > Set to `1` (current default) unless the whole history is needed
 
 ## Security
 
 ### Harden runner
 
-> ![NOTE]
+> [!NOTE]
 > Use [step-security/harden-runner](https://github.com/step-security/harden-runner)
 > __at the beginning of every job__
 

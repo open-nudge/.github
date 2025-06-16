@@ -112,20 +112,6 @@ jobs:
             .github/rulesets
           sparse-checkout-cone-mode: false
           persist-credentials: false
-      - name: "Wait for template setup to finish (guard)"
-        # yamllint disable rule:indentation rule:line-length
-        run: |
-          printf "Waiting for branch 'gh-pages' to exist on GitHub...\n"
-
-          while true; do
-            # Check if the branch exists on the remote repository
-            if git ls-remote --exit-code --heads origin gh-pages &>/dev/null; then
-              printf "Branch 'gh-pages' exists!\n"
-              break
-            fi
-
-            sleep 1
-          done
       - name: "Adjust reviewers in rulesets"
         env:
           REVIEWERS: "${{ steps.reviewers.outputs.count }}"
@@ -133,9 +119,9 @@ jobs:
             ${{ steps.reviewers.outputs.count != '0' && 'true' || 'false' }}
         run: >
           sed -i \
-            -e "s/\"PLACEHOLDER_REVIEWERS\"/${REVIEWERS}/g" \
-            -e "s/\"PLACEHOLDER_LAST_PUSH_APPROVAL\"/${LAST_PUSH_APPROVAL}/g" \
-            .github/rulesets/branch-default-human.json
+          -e "s/\"PLACEHOLDER_REVIEWERS\"/${REVIEWERS}/g" \
+          -e "s/\"PLACEHOLDER_LAST_PUSH_APPROVAL\"/${LAST_PUSH_APPROVAL}/g" \
+          .github/rulesets/branch-default-human.json
       - name: "Check reviewers changed correctly"
         run: >
           cat .github/rulesets/branch-default-human.json
@@ -162,26 +148,6 @@ jobs:
               '${RULES_ENDPOINT}' \
               --input {}"
         # yamllint enable rule:indentation rule:line-length
-      - name: "Enable GitHub Pages (public/enterprise only)"
-        # Administration AND Pages write
-        # https://docs.github.com/en/rest/pages/pages?apiVersion=2022-11-28#create-a-github-pages-site
-        if: >
-          github.event.repository.visibility == 'public'
-          || steps.organization.outputs.type == 'enterprise'
-        env:
-          GH_TOKEN: "${{ secrets.TEMPLATE_GITHUB_TOKEN }}"
-          # yamllint disable rule:line-length
-          PAGES_ENDPOINT: >-
-            /repos/${{ github.repository_owner }}/${{ github.event.repository.name }}/pages
-          # yamllint enable rule:line-length
-        run: >
-          gh api
-          --method POST
-          -H "Accept: application/vnd.github+json"
-          -H "X-GitHub-Api-Version: 2022-11-28"
-          "${PAGES_ENDPOINT}"
-          -f "source[branch]=gh-pages" -f "source[path]=/docs"
-          -f "build_type=legacy"
       - name: "Apply general settings for the repository"
         # Administration write
         # https://docs.github.com/en/rest/repos/repos?apiVersion=2022-11-28#update-a-repository

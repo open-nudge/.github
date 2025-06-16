@@ -16,13 +16,6 @@ which serve as the foundation for all related materials.
 - [Mission](#mission)
 - [Vision](#vision)
 - [Motto](#motto)
-- [Brand Identity Prism](#brand-identity-prism)
-    - [Physique](#physique)
-    - [Personality](#personality)
-    - [Culture](#culture)
-    - [Relationship](#relationship)
-    - [Reflection](#reflection)
-    - [Self-image](#self-image)
 
 ## Values
 
@@ -38,30 +31,16 @@ which serve as the foundation for all related materials.
 
 ## Mission
 
-> ![CRITICAL]
+> [!CRITICAL]
 > Provide programmers with intuitive tools
 > free of charge, enabling them to build the best software.
 
 ## Vision
 
-> ![CRITICAL]
+> [!CRITICAL]
 > Empower everyone through high-quality, open technology.
 
 ## Motto
 
-> ![CRITICAL]
+> [!CRITICAL]
 > Human-first tooling.
-
-## Brand Identity Prism
-
-### Physique
-
-### Personality
-
-### Culture
-
-### Relationship
-
-### Reflection
-
-### Self-image

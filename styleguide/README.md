@@ -10,7 +10,7 @@ SPDX-License-Identifier: Apache-2.0
 This guide outlines best practices for code structure across multiple
 languages—unless a language-specific guide states otherwise.
 
-> ![CAUTION]
+> [!CAUTION]
 > While rules exist, exceptions do too. Always consider each case individually.
 
 ## Table of Contents
@@ -41,7 +41,7 @@ To write high-quality code efficiently:
 Linters enforce many of these guidelines.
 `opennudge` tries to maximize linter coverage to catch issues automatically.
 
-> ![CAUTION]
+> [!CAUTION]
 > Prefer to turn off linter on a case-by-case basis instead of globally
 
 ## Naming
@@ -54,7 +54,7 @@ Linters enforce many of these guidelines.
 
 ## Modules
 
-> ![CAUTION]
+> [!CAUTION]
 > "Modules" may refer to namespaces, packages, or projects,
 > depending on the language.
 
