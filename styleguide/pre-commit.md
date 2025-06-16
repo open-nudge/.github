@@ -7,7 +7,7 @@ SPDX-License-Identifier: Apache-2.0
 
 # Pre-commit
 
-> ![CAUTION]
+> [!CAUTION]
 > Rules exist, but so do exceptions. Always evaluate each case individually.
 
 ## Table of contents
@@ -26,18 +26,18 @@ Use checkers/linters to automatically verify your file, suggested ones:
 
 - [adrienverge/yamllint](https://github.com/adrienverge/yamllint) - YAML style
 
-> ![CAUTION]
+> [!CAUTION]
 > Automatic checks __may not be described__ in this document
 
 ## Naming
 
-> ![NOTE]
+> [!NOTE]
 > Use dash-case (hyphen, lower-case) __for every programmatic name__
 > (e.g. `id` field value)
 
 ### Differentiate types
 
-> ![NOTE]
+> [!NOTE]
 > Hooks can be (approximately) divided into those modifying
 > files and those which do not
 
@@ -48,19 +48,19 @@ of those (for example applying changes again via `git add`).
 
 ## IDs
 
-> ![NOTE]
+> [!NOTE]
 > Each ID should be the same as the human-readable name of the hook
 > without the prefix
 
 For hooks performing fix and check afterwards __you can add the `fix`/`feat`__
 prefix to differentiate different steps.
 
-> ![CAUTION]
+> [!CAUTION]
 > You can use `alias` to rename hooks with predefined `id` fields.
 
 ## Version pinning
 
-> ![NOTE]
+> [!NOTE]
 > Each repository should be pinned to the commit, __not the version__
 
 You can use the following command to update and freeze the dependencies:
@@ -71,7 +71,7 @@ pre-commit autoupdate --freeze
 
 ## Order
 
-> ![CAUTION]
+> [!CAUTION]
 > Order of the hooks may change the outcome dramatically!
 
 Hook ordering guidelines:
