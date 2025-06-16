@@ -1,0 +1,272 @@
+# SPDX-FileCopyrightText: © 2025 open-nudge <https://github.com/open-nudge>
+# SPDX-FileContributor: szymonmaszke <github@maszke.co>
+#
+# SPDX-License-Identifier: Apache-2.0
+
+---
+default_stages:
+  - "pre-commit"
+default_install_hook_types:
+  - "pre-commit"
+  - "commit-msg"
+  - "pre-push"
+  - "post-checkout"
+  - "post-merge"
+fail_fast: true
+repos:
+  - repo: "https://github.com/siderolabs/conform"
+    rev: "e1fdd4c4624bafa674a905595a26c8d0797ddb6c"  # frozen: v0.1.0-alpha.30
+    hooks:
+      # pre-push due to PGP signature
+      - id: "conform"
+        alias: "policy"
+        name: "<<<CHECK>>> Policy"
+        verbose: true
+        stages:
+          - "pre-push"
+        entry: "conform enforce"
+        pass_filenames: false
+  - repo: "https://github.com/compilerla/conventional-pre-commit"
+    rev: "7c1022b54dcb1d1911e6c885089940e8499f0253"  # frozen: v4.2.0
+    hooks:
+      - id: "conventional-pre-commit"
+        name: "<<<CHECK>>> Commit"
+        alias: "commit"
+        stages:
+          - "commit-msg"
+        args:
+          - "--strict"
+          - "--scopes"
+          - "''"
+          - "'feat'"
+          - "'fix'"
+          - "'feat!'"
+          - "'fix!'"
+        verbose: true
+        require_serial: true
+        always_run: true
+  - repo: "https://github.com/trufflesecurity/trufflehog"
+    rev: "52d0ee5f5419ca938d3b7e358fe6f32131565026"  # frozen: v3.89.1
+    hooks:
+      - id: "trufflehog"
+        alias: "secrets"
+        name: "<<<CHECK>>> Secrets"
+        verbose: true
+  - repo: "https://github.com/hukkin/mdformat"
+    rev: "ff29be1a1ba8029d9375882aa2c812b62112a593"  # frozen: 0.7.22
+    hooks:
+      - id: "mdformat"
+        alias: "fix-markdown-format"
+        name: "<<<FIX>>> Markdown Format"
+        verbose: true
+        require_serial: true
+        additional_dependencies:
+          - "mdformat-black"
+          - "mdformat_frontmatter"
+          - "mdformat_footnote"
+          - "mdformat-gfm"
+          - "mdformat_gfm_alerts"
+          - "mdformat-mkdocs"
+        types:
+          - "markdown"
+        exclude: "^(DCO.md|LICENSE.md|LICENSES/.*)$"
+  - repo: "https://github.com/hukkin/mdformat"
+    rev: "ff29be1a1ba8029d9375882aa2c812b62112a593"  # frozen: 0.7.22
+    hooks:
+      - id: "mdformat"
+        alias: "check-markdown-format"
+        name: "<<<CHECK>>> Markdown Format"
+        entry: "mdformat --check"
+        verbose: true
+        require_serial: true
+        additional_dependencies:
+          - "mdformat-black"
+          - "mdformat_frontmatter"
+          - "mdformat_footnote"
+          - "mdformat-gfm"
+          - "mdformat_gfm_alerts"
+          - "mdformat-mkdocs"
+        types:
+          - "markdown"
+        exclude: "^(DCO.md|LICENSE.md|LICENSES/.*)$"
+  - repo: "https://github.com/jackdewinter/pymarkdown"
+    rev: "e4be0b2c785e3a169b20bcbfe91dbc3db76b592f"  # frozen: v0.9.30
+    hooks:
+      - id: "pymarkdown"
+        alias: "fix-markdown"
+        name: "<<<FIX>>> Markdown"
+        verbose: true
+        require_serial: true
+        entry: "pymarkdown --disable-rules md007,md028,md033,md034,md041,md042"
+        args:
+          - "fix"
+        types:
+          - "markdown"
+        exclude: "^(DCO.md|LICENSE.md|LICENSES/.*)$"
+        additional_dependencies:
+          - "application-properties"
+  - repo: "https://github.com/jackdewinter/pymarkdown"
+    rev: "e4be0b2c785e3a169b20bcbfe91dbc3db76b592f"  # frozen: v0.9.30
+    hooks:
+      - id: "pymarkdown"
+        alias: "fix-markdown"
+        name: "<<<CHECK>>> Markdown"
+        verbose: true
+        require_serial: true
+        entry: "pymarkdown --disable-rules md007,md028,md033,md034,md041,md042"
+        args:
+          - "scan"
+        types:
+          - "markdown"
+        exclude: "^(DCO.md|LICENSE.md|LICENSES/.*)$"
+        additional_dependencies:
+          - "application-properties"
+  - repo: "https://github.com/AlexanderDokuchaev/md-dead-link-check"
+    rev: "d5a37e0b14e5918605d22b34562532762ccb2e47"  # frozen: v1.2.0
+    hooks:
+      - id: "md-dead-link-check"
+        alias: "links"
+        name: "<<<CHECK>>> Links"
+        verbose: true
+        require_serial: true
+        types:
+          - "markdown"
+        exclude: "^(DCO.md|LICENSE.md|LICENSES/.*)$"
+  - repo: "https://github.com/errata-ai/vale"
+    rev: "44c18b3d2ebc971c160cec26cd179a3f73d37f58"  # frozen: v3.12.0
+    hooks:
+      - id: "vale"
+        alias: "setup-natural-language"
+        entry: "vale sync"
+        name: "<<<SETUP>>> Natural language"
+        verbose: true
+        pass_filenames: false
+        require_serial: true
+        stages:
+          - "pre-commit"
+  - repo: "https://github.com/errata-ai/vale"
+    rev: "44c18b3d2ebc971c160cec26cd179a3f73d37f58"  # frozen: v3.12.0
+    hooks:
+      - id: "vale"
+        alias: "natural-language"
+        name: "<<<CHECK>>> Natural language"
+        verbose: true
+        exclude: "^(DCO.md|LICENSE.md|LICENSES/.*)$"
+  - repo: "https://github.com/fsfe/reuse-tool"
+    rev: "60dfc6b2ad9e1f3eabfbcf3a0dc202ee89dc5a00"  # frozen: v5.0.2
+    hooks:
+      - id: "reuse"
+        alias: "legal"
+        name: "<<<CHECK>>> Legal"
+        verbose: true
+        exclude: "^(DCO.md|LICENSE.md|LICENSES/.*)$"
+  - repo: "https://github.com/adrienverge/yamllint"
+    rev: "79a6b2b1392eaf49cdd32ac4f14be1a809bbd8f7"  # frozen: v1.37.1
+    hooks:
+      - id: "yamllint"
+        alias: "yaml"
+        name: "<<<CHECK>>> YAML"
+        verbose: true
+  - repo: "https://github.com/codespell-project/codespell"
+    rev: "63c8f8312b7559622c0d82815639671ae42132ac"  # frozen: v2.4.1
+    hooks:
+      - id: "codespell"
+        alias: "fix-code"
+        name: "<<<FIX>>> Code"
+        entry: "codespell --write-changes"
+        verbose: true
+        exclude: "^(DCO.md|LICENSE.md|LICENSES/.*)$"
+  - repo: "https://github.com/codespell-project/codespell"
+    rev: "63c8f8312b7559622c0d82815639671ae42132ac"  # frozen: v2.4.1
+    hooks:
+      - id: "codespell"
+        alias: "check-code"
+        name: "<<<CHECK>>> Code"
+        verbose: true
+        exclude: "^(DCO.md|LICENSE.md|LICENSES/.*)$"
+  - repo: "https://github.com/editorconfig-checker/editorconfig-checker"
+    rev: "90a8919b913e39eef3a6a7011a4ecc67466a98d7"  # frozen: v3.3.0
+    hooks:
+      - id: "editorconfig-checker"
+        alias: "editorconfig"
+        name: "<<<CHECK>>> Editorconfig"
+        verbose: true
+        exclude: "^(DCO.md|LICENSE.md|LICENSES/.*)$"
+
+  # Pre-commit provided hooks
+  - repo: "https://github.com/pre-commit/pre-commit-hooks"
+    rev: "cef0300fd0fc4d2a87a85fa2093c6b283ea36f4b"  # frozen: v5.0.0
+    hooks:
+      - id: "no-commit-to-branch"
+        alias: "main-branch-clean"
+        name: "<<<CHECK>>> Main branch clean"
+      - id: "end-of-file-fixer"
+        alias: "end-of-file"
+        name: "<<<FIX>>> End of file"
+        stages:
+          - "pre-commit"
+      - id: "mixed-line-ending"
+        name: "<<<FIX>>> Mixed line ending"
+      - id: "pretty-format-json"
+        alias: "json"
+        name: "<<<FIX>>> JSON"
+        args:
+          - "--autofix"
+          - "--no-sort-keys"
+      - id: "trailing-whitespace"
+        name: "<<<CHECK>>> Trailing whitespace"
+        stages:
+          - "pre-commit"
+      - id: "check-added-large-files"
+        alias: "large-file"
+        name: "<<<CHECK>>> Large file"
+        stages:
+          - "pre-commit"
+      - id: "check-case-conflict"
+        alias: "case-conflict"
+        name: "<<<CHECK>>> Case conflict"
+      - id: "check-executables-have-shebangs"
+        alias: "shebang"
+        name: "<<<CHECK>>> Shebang"
+        stages:
+          - "pre-commit"
+      - id: "check-merge-conflict"
+        alias: "merge-conflict"
+        name: "<<<CHECK>>> Merge conflict"
+      - id: "check-symlinks"
+        alias: "symlink"
+        name: "<<<CHECK>>> Symlink"
+      - id: "check-toml"
+        alias: "toml"
+        name: "<<<CHECK>>> TOML"
+      - id: "forbid-submodules"
+        alias: "git-submodules"
+        name: "<<<CHECK>>> Git submodules"
+  - repo: "local"
+    hooks:
+      - id: "dco"
+        verbose: true
+        name: "<<<CHECK>>> DCO"
+        language: "fail"
+        entry: >
+          Changing DCO is prohibited according to the DCO itself.
+          If you wish to change/remove it, please do so in a separate commit
+          and disable this check.
+        files: "^DCO.md$"
+      - id: "check-pre-commit"
+        verbose: true
+        name: "<<<CHECK>>> pre-commit"
+        entry: "pre-commit validate-config .pre-commit-config.yaml"
+        files: "^.pre-commit-config.yaml$"
+        language: "system"
+        require_serial: true
+        pass_filenames: false
+      - id: "fix-pre-commit"
+        verbose: true
+        name: "<<<FIX>>> pre-commit"
+        entry: "pre-commit autoupdate --freeze"
+        language: "system"
+        require_serial: true
+        pass_filenames: false
+        always_run: true
+...

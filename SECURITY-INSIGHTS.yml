@@ -1,0 +1,58 @@
+# SPDX-FileCopyrightText: © 2025 open-nudge <https://github.com/open-nudge>
+# SPDX-FileContributor: szymonmaszke <github@maszke.co>
+#
+# SPDX-License-Identifier: Apache-2.0
+
+---
+header:
+  schema-version: "1.0.0"
+  last-updated: "2025-03-01"
+  expiration-date: "2026-03-01T10:30:31Z"
+  project-url: >
+    https://github.com/open-nudge/.github
+  changelog: >
+    https://github.com/open-nudge/.github/blob/main/CHANGELOG.md
+  license: >
+    https://github.com/open-nudge/.github/blob/main/LICENSE.md
+project-lifecycle:
+  status: "wip"
+  bug-fixes-only: false
+  core-team:
+    - name: "open-nudge"
+      uri: "https://github.com/open-nudge"
+      role: "owner"
+  roadmap: >
+    https://github.com/open-nudge/.github/blob/main/ROADMAP.md
+contribution-policy:
+  accepts-pull-requests: true
+  accepts-automated-pull-requests: true
+  code-of-conduct: >
+    https://github.com/open-nudge/.github/blob/main/CODE_OF_CONDUCT.md
+  contributing-policy: >
+    https://github.com/open-nudge/.github/blob/main/CONTRIBUTING.md
+distribution-points:
+  - "https://github.com/open-nudge/.github"
+security-artifacts:
+  threat-model:
+    threat-model-created: false
+  self-assessment:
+    self-assessment-created: true
+    evidence-url:
+      - "https://github.com/open-nudge/.github/blob/master/SECURITY-SELF-ASSESSMENT.md"
+security-contacts:
+  - type: "website"
+    value: >
+      https://github.com/open-nudge/.github/security/policy
+vulnerability-reporting:
+  accepts-vulnerability-reports: true
+  security-policy: >
+    https://github.com/open-nudge/.github/security/policy
+  comment: >
+    The first and best way to report a vulnerability is by using
+    private security issues in GitHub.
+dependencies:
+  third-party-packages: false
+  env-dependencies-policy:
+    policy-url: >
+      https://github.com/open-nudge/.github/blob/main/SECURITY-DEPENDENCY.md
+...

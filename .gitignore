@@ -1,0 +1,26 @@
+# SPDX-FileCopyrightText: © 2025 open-nudge <https://github.com/open-nudge>
+# SPDX-FileContributor: szymonmaszke <github@maszke.co>
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# Ignore everything
+**
+
+# But not these file types
+!**/*.md
+!**/*.yml
+!**/*.yaml
+!**/*.json
+!**/*.ini
+!**/*.cff
+!**/*.license
+!**/*.txt
+
+# Not ignoring specific config files
+!.gitignore
+!.gitattributes
+!.editorconfig
+!CODEOWNERS
+
+# Prevent directory exclusion if they contain whitelisted files
+!*/
