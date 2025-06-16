@@ -117,11 +117,12 @@ jobs:
           REVIEWERS: "${{ steps.reviewers.outputs.count }}"
           LAST_PUSH_APPROVAL: >-
             ${{ steps.reviewers.outputs.count != '0' && 'true' || 'false' }}
+        # yamllint disable rule:indentation rule:line-length
         run: >
           sed -i \
-          -e "s/\"PLACEHOLDER_REVIEWERS\"/${REVIEWERS}/g" \
-          -e "s/\"PLACEHOLDER_LAST_PUSH_APPROVAL\"/${LAST_PUSH_APPROVAL}/g" \
-          .github/rulesets/branch-default-human.json
+            -e "s/\"PLACEHOLDER_REVIEWERS\"/${REVIEWERS}/g" \
+            -e "s/\"PLACEHOLDER_LAST_PUSH_APPROVAL\"/${LAST_PUSH_APPROVAL}/g" \
+            .github/rulesets/branch-default-human.json
       - name: "Check reviewers changed correctly"
         run: >
           cat .github/rulesets/branch-default-human.json
@@ -299,6 +300,12 @@ jobs:
             files.pythonhosted.org:443
             github.com:443
             pypi.org:443
+      - name: "Checkout repository"
+        # yamllint disable rule:line-length
+        uses: "actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683" # v4.2.2
+        # yamllint enable rule:line-length
+        with:
+          persist-credentials: false
       - name: "Remove default labels"
         env:
           GH_TOKEN: "${{ github.token }}"
