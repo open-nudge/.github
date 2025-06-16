@@ -19,10 +19,15 @@ SPDX-License-Identifier: Apache-2.0
     </em>
 </p>
 
-<p align="center">
-🤝 <a href="#-contribute">Contribute</a>
+<div align="center">
+
 <a href="https://opensource.org/licenses/Apache-2.0">![License](https://img.shields.io/badge/License-Apache_2.0-blue?style=for-the-badge)</a>
-📜 <a href="#-legal">Legal</a>
+
+</div>
+
+<p align="center">
+🤝 <a href="#contribute">Contribute</a>
+📜 <a href="#legal">Legal</a>
 </p>
 <!-- vale on -->
 
@@ -47,7 +52,7 @@ The following sections describing the `opennudge` are available:
 
 <!-- mkdocs remove start -->
 
-## 🤝 Contribute
+## Contribute
 
 We welcome your contributions! Start here:
 
@@ -55,7 +60,7 @@ We welcome your contributions! Start here:
 - [Contributing Guide](CONTRIBUTING.md)
 - [Open an Issue](https://github.com/open-nudge/.github/issues)
 
-## 📜 Legal
+## Legal
 
 - This project is licensed under the _Apache 2.0 License_ - see
     the [LICENSE](LICENSE.md) file for details.
