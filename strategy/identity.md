@@ -31,16 +31,16 @@ which serve as the foundation for all related materials.
 
 ## Mission
 
-> [!CRITICAL]
+> [!IMPORTANT]
 > Provide programmers with intuitive tools
 > free of charge, enabling them to build the best software.
 
 ## Vision
 
-> [!CRITICAL]
+> [!IMPORTANT]
 > Empower everyone through high-quality, open technology.
 
 ## Motto
 
-> [!CRITICAL]
+> [!IMPORTANT]
 > Human-first tooling.
