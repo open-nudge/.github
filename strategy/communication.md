@@ -56,6 +56,106 @@ Exact publishing schedule is subject to change based on:
 - Workload and bug fixing on current projects maintenance
 - Contributors availability
 
+## Content
+
+Content should be related to the unit and posses the following traits:
+
+- comprehensive description
+
+- many links to related resources
+
+- __all links should be markdown hidden__ EXCEPT:
+
+    - links to the project repository (e.g. GitHub)
+    - links to starring the project on GitHub
+    - links to LinkedIn or BlueSky profiles
+
+- contain "boilerplate" like links to social media
+
+### Boilerplate
+
+These boilerplate information should be included especially in promotional
+posts on Reddit or HackerNews.
+
+#### Header
+
+> [!CAUTION]
+> __Adjust appropriately based on the project__
+
+For reddit/hackernews:
+
+```markdown
+## Introducing <NAME>!
+
+Hey, I have created <NAME> which <DESCRIPTION>.
+```
+
+For bluesky/linkedin:
+
+```markdown
+Introducing <NAME>, which is <DESCRIPTION>!
+```
+
+<!-- pyml disable line-length-->
+
+For all platforms:
+
+```markdown
+
+If you find it useful/interesting, starring the repository and liking/commenting on this post would be very appreciated!
+
+> __GitHub repository__: https://github.com/open-nudge/<NAME>
+```
+
+<!-- pyml enable line-length-->
+
+For `reddit` and `hackernews`:
+
+```markdown
+For the latest updates on new tools from `opennudge`, consider following on:
+
+- __LinkedIn__: https://www.linkedin.com/company/opennudge
+- __BlueSky__: https://bsky.app/profile/opennudge.com
+```
+
+#### Footer
+
+> [!CAUTION]
+> __Adjust appropriately based on the project__
+
+<!-- pyml disable line-length-->
+
+```markdown
+## Check it out yourself!
+
+- __GitHub repository__: https://github.com/open-nudge/<NAME>
+- Full documentation [here](https://open-nudge.github.io/<NAME>/latest/)
+- __FOSS Python template which assures high quality of the project__ and which you can use yourself to do the same: https://github.com/open-nudge/opentemplate
+
+If you find this project useful and/or interesting please consider:
+
+- __Starring the repository on GitHub here__: https://github.com/open-nudge/<NAME>
+- __Giving like and/or comment on this post__
+```
+
+<!-- pyml enable line-length-->
+
+For `reddit` and `hackernews`:
+
+```markdown
+
+For the latest updates on new tools from `opennudge`, consider following on:
+
+- __LinkedIn__: https://www.linkedin.com/company/opennudge
+- __BlueSky__: https://bsky.app/profile/opennudge.com
+```
+
+For any platform finish off with:
+
+```markdown
+Thank you in advance for your interest and support!
+```
+
 ## Platforms
 
 Publishing platforms are separated into three categories:
