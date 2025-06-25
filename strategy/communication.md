@@ -102,7 +102,7 @@ For all platforms:
 
 ```markdown
 
-If you find it useful/interesting, starring the repository and liking/commenting on this post would be very appreciated!
+Starring the repo and liking/sharing this post is greatly appreciated!
 
 > __GitHub repository__: https://github.com/open-nudge/<NAME>
 ```
@@ -112,7 +112,7 @@ If you find it useful/interesting, starring the repository and liking/commenting
 For `reddit` and `hackernews`:
 
 ```markdown
-For the latest updates on new tools from `opennudge`, consider following on:
+Stay up to date with new tools from opennudge:
 
 - __LinkedIn__: https://www.linkedin.com/company/opennudge
 - __BlueSky__: https://bsky.app/profile/opennudge.com
@@ -121,7 +121,8 @@ For the latest updates on new tools from `opennudge`, consider following on:
 #### Footer
 
 > [!CAUTION]
-> __Adjust appropriately based on the project__
+> __Adjust appropriately based on the project
+> and only use it on `reddit`/`hackernews` platforms__
 
 <!-- pyml disable line-length-->
 
@@ -130,12 +131,12 @@ For the latest updates on new tools from `opennudge`, consider following on:
 
 - __GitHub repository__: https://github.com/open-nudge/<NAME>
 - Full documentation [here](https://open-nudge.github.io/<NAME>/latest/)
-- __FOSS Python template which assures high quality of the project__ and which you can use yourself to do the same: https://github.com/open-nudge/opentemplate
+- __FOSS Python template ensuring high project quality — and ready for your own use__: https://github.com/open-nudge/opentemplate
 
-If you find this project useful and/or interesting please consider:
+If you find this project useful or interesting please consider:
 
 - __Starring the repository on GitHub here__: https://github.com/open-nudge/<NAME>
-- __Giving like and/or comment on this post__
+- __Liking or commenting on this post__
 ```
 
 <!-- pyml enable line-length-->
@@ -144,7 +145,7 @@ For `reddit` and `hackernews`:
 
 ```markdown
 
-For the latest updates on new tools from `opennudge`, consider following on:
+Stay up to date with new tools from opennudge:
 
 - __LinkedIn__: https://www.linkedin.com/company/opennudge
 - __BlueSky__: https://bsky.app/profile/opennudge.com
@@ -153,7 +154,7 @@ For the latest updates on new tools from `opennudge`, consider following on:
 For any platform finish off with:
 
 ```markdown
-Thank you in advance for your interest and support!
+Thanks so much for your interest and support — it truly means a lot!
 ```
 
 ## Platforms
