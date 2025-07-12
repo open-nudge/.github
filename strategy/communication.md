@@ -44,7 +44,8 @@ SPDX-License-Identifier: Apache-2.0
 
 ## Schedule
 
-Publishing is based on a state of __projects pipeline__, namely:
+Schedule is done based on the project readiness and Buffer
+scheduling tool.
 
 - If `5` or more units are ready, release them every week
 - If `3-5` units are ready, release them every two weeks
@@ -68,7 +69,7 @@ Content should be related to the unit and posses the following traits:
 
     - links to the project repository (e.g. GitHub)
     - links to starring the project on GitHub
-    - links to LinkedIn or BlueSky profiles
+    - links to LinkedIn or Twitter profiles
 
 - contain "boilerplate" like links to social media
 
@@ -90,7 +91,7 @@ For reddit/hackernews:
 Hey, I have created <NAME> which <DESCRIPTION>.
 ```
 
-For bluesky/linkedin:
+For twitter/linkedin:
 
 ```markdown
 Introducing <NAME>, which is <DESCRIPTION>!
@@ -115,7 +116,7 @@ For `reddit` and `hackernews`:
 Stay up to date with new tools from opennudge:
 
 - __LinkedIn__: https://www.linkedin.com/company/opennudge
-- __BlueSky__: https://bsky.app/profile/opennudge.com
+- __Twitter__: https://bsky.app/profile/opennudge.com
 ```
 
 #### Footer
@@ -148,7 +149,7 @@ For `reddit` and `hackernews`:
 Stay up to date with new tools from opennudge:
 
 - __LinkedIn__: https://www.linkedin.com/company/opennudge
-- __BlueSky__: https://bsky.app/profile/opennudge.com
+- __Twitter__: https://bsky.app/profile/opennudge.com
 ```
 
 For any platform finish off with:
@@ -171,7 +172,9 @@ Publishing platforms are separated into three categories:
 
 The following platforms were identified:
 
-- [bluesky](https://www.bluesky.com/) - main channel
+- [twitter](https://www.x.com/) - main channel
+
+- [threads](https://www.threads.com/) - secondary channel
 
 - [linkedin](https://www.linkedin.com/) - official channel
 
@@ -191,7 +194,15 @@ The following platforms were identified:
 [Buffer](https://buffer.com/) is used to manage platforms which
 are available as a direct integration.
 
+> [!NOTE]
+> Buffer automatically manages the posting schedule, but some manual
+> adjustments might be necessary
+
 ## Timing
+
+> [!CAUTION]
+> Buffer scheduling tool is used to manage the timing of the posts,
+> consider information below as a guideline
 
 > [!NOTE]
 > Schedules target primarily US (PDT time zone) or European (UTC) audience
@@ -202,7 +213,7 @@ Essential factors to consider:
     targeted during the workweek, mornings (8:00-12:00)
 - "Leisure" platforms (reddit, hackernews) should be targeted during
     weekends, evenings (18:00-22:00)
-- "Informative" platforms ([bluesky](https://www.bluesky.com/)) should be
+- "Informative" platforms ([twitter](https://www.x.com/)) should be
     targeted during the evenings (18:00-22:00)
 
 > [!CAUTION]
@@ -212,8 +223,10 @@ Essential factors to consider:
 
 Timing is platform specific based on (approximate) best time to post, specifically:
 
-- [bluesky](https://www.bluesky.com/) - evenings (18:00-22:00),
+- [twitter](https://www.x.com/) - evenings (18:00-22:00),
     Sunday/Saturday/Thursday; [source](https://besttimetopost.blue/howard.fm)
+- [threads](https://www.threads.com/) - evenings (18:00-22:00),
+    Thursday 8:00 ([source](https://www.hopperhq.com/blog/best-time-to-post-on-threads/))
 - [linkedin](https://www.linkedin.com/) - mornings (8:00-12:00),
     Tuesdays/Thursdays/Wednesdays
 - [reddit](https://www.reddit.com/) - evenings (18:00-22:00),
@@ -230,7 +243,8 @@ Timing is platform specific based on (approximate) best time to post, specifical
 
 ### Exemplary
 
-- Bluesky - Sunday at 20:00 UTC
+- Twitter - Sunday at 20:00 UTC
+- Threads - Sunday at 20:00 UTC
 - Reddit - Monday at 20:00 UTC
 - LinkedIn - Tuesday at 10:00 UTC
 - Hackernews - Wednesday at 11:00 UTC
