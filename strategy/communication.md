@@ -116,7 +116,7 @@ For `reddit` and `hackernews`:
 Stay up to date with new tools from opennudge:
 
 - __LinkedIn__: https://www.linkedin.com/company/opennudge
-- __Twitter__: https://bsky.app/profile/opennudge.com
+- __Twitter/X__: https://x.com/opennudge
 ```
 
 #### Footer
@@ -149,7 +149,7 @@ For `reddit` and `hackernews`:
 Stay up to date with new tools from opennudge:
 
 - __LinkedIn__: https://www.linkedin.com/company/opennudge
-- __Twitter__: https://bsky.app/profile/opennudge.com
+- __Twitter/X__: https://x.com/opennudge
 ```
 
 For any platform finish off with:
