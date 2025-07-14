@@ -22,9 +22,9 @@ links to their respective repositories (if already released)
 
 - [.github](#github)
 - [opentemplate](#opentemplate)
-- [commition](#commition)
 - [cogeol](#cogeol)
-- [tooload](#tooload)
+- [loadfig](#loadfig)
+- [commition](#commition)
 - [A](#a)
 - [B](#b)
 - [C](#c)
@@ -39,6 +39,13 @@ links to their respective repositories (if already released)
 - [L](#l)
 - [M](#m)
 - [N](#n)
+- [O](#o)
+- [P](#p)
+- [Q](#q)
+- [R](#r)
+- [S](#s)
+- [T](#t)
+- [U](#u)
 
 ## .github
 
@@ -56,15 +63,6 @@ checks, automation, security best practices, and more out of the box.
 > ![CAUTION]
 > Click [here](https://github.com/open-nudge/opentemplate) to view the repository.
 
-## commition
-
-Immutable commit-only based versioning for Python projects helping with
-[some behavioral pitfalls](https://hynek.me/articles/semver-will-not-save-you/) of
-[semantic versioning](https://semver.org/) scheme.
-
-> ![CAUTION]
-> Click [here](https://github.com/open-nudge/commition) to view the repository.
-
 ## cogeol
 
 Library to use with [cog](https://github.com/nedbat/cog) allowing users to
@@ -74,14 +72,26 @@ versions and update them whenever necessary) their library use.
 > ![CAUTION]
 > Click [here](https://github.com/open-nudge/cogeol) to view the repository.
 
-## tooload
+## loadfig
 
 Library to load configuration from `pyproject.toml` or `.<TOOL-NAME>.yml` files
 in a standardized way (including `git` repository finding
 with no dependencies).
 
 > ![CAUTION]
-> Click [here](https://github.com/open-nudge/tooload) to view the repository.
+> Click [here](https://github.com/open-nudge/loadfig) to view the repository.
+
+## commition
+
+> ![CAUTION]
+> We are here currently!
+
+Immutable commit-only based versioning for Python projects helping with
+[some behavioral pitfalls](https://hynek.me/articles/semver-will-not-save-you/) of
+[semantic versioning](https://semver.org/) scheme.
+
+> ![CAUTION]
+> Click here to view the repository.
 
 ## A
 
@@ -149,24 +159,31 @@ Flexible and zero-abstraction prompt chaining library
 
 Most pleasant configuration library in Python
 
-## R
+## Q
 
 Adapter library converting objects and types of pydantic-like libraries
 (e.g. [`sqlmodel`](https://github.com/fastapi/sqlmodel),
 [`strawberry-graphql`](https://github.com/strawberry-graphql/strawberry),
 [`polyfactory`](https://github.com/litestar-org/polyfactory)
 
-## S
+## R
 
 Attestation of `pytest` results (as described by
 [this predicate](https://github.com/in-toto/attestation/blob/main/spec/predicates/test-result.md))
 
-## T
+## S
 
 `pydantic`-first data generation library similar to [`gentab`](https://github.com/omaralvarez/gentab)
 targeting complex column inter-dependence generation asynchronously (depends on `O`)
 
-## U
+## T
 
 Small tool (integrated with, e.g. `pre-commit`) indicating whether the change
 is breaking and is marked correctly as such in semantic versioning.
+
+## U
+
+Semantic harden-runner
+(see [harden-runner](https://github.com/step-security/harden-runner)) which
+allows to specify whole categories of enabled endpoints instead of
+individual ones.
