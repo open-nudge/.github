@@ -46,6 +46,7 @@ links to their respective repositories (if already released)
 - [S](#s)
 - [T](#t)
 - [U](#u)
+- [V](#v)
 
 ## .github
 
@@ -187,3 +188,10 @@ Semantic harden-runner
 (see [harden-runner](https://github.com/step-security/harden-runner)) which
 allows to specify whole categories of enabled endpoints instead of
 individual ones.
+
+## V
+
+OSV-Scanner management tool reading `pyproject.toml` and excluding
+vulnerabilities (if dev dependencies only) automatically.
+
+Exception management which automates it and allows for scripting.
