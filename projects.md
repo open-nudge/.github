@@ -100,19 +100,19 @@ Unified logging library for CLI and production application.
 
 ## B
 
-Library to create checkers/linters
+Opinionated linter checking best Python practices
 
 ## C
 
-Opinionated linter checking best Python practices
+Opinionated linter checking best documentation practices
 
 ## D
 
-Opinionated linter checking best documentation practices
+Opinionated linter checking best GitHub Actions practices
 
 ## E
 
-Opinionated linter checking best GitHub Actions practices
+Library to create checkers/linters
 
 ## F
 
@@ -195,3 +195,8 @@ OSV-Scanner management tool reading `pyproject.toml` and excluding
 vulnerabilities (if dev dependencies only) automatically.
 
 Exception management which automates it and allows for scripting.
+
+## W
+
+Pyproject.toml separator which allows to hook different systems
+(e.g. `pre-commit`) on sub-file changes.
