@@ -25,9 +25,9 @@ SPDX-License-Identifier: Apache-2.0
 for more info) that:
 </p>
 
-- builds __human-centric tech__ by making __every tool effortless to use__
-- ensures __top-tier code quality__ by __raising the bar on standards__
-- prioritizes __automation, security & AI__
+- builds __human-centric tech__ by making __every tool pleasant to use__
+- focuses on improving __code quality__ by __automation and standards__
+- prioritizes __developer experience, security and AI__
 
 <p align="center">
    If this resonates with you, let's connect on socials or at
