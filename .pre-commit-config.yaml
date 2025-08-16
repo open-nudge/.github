@@ -46,7 +46,7 @@ repos:
         require_serial: true
         always_run: true
   - repo: "https://github.com/trufflesecurity/trufflehog"
-    rev: "0c9fbff42893900f6cc15010c408d70d6013819c"  # frozen: v3.90.4
+    rev: "0f58ae7c5036094a1e3e750d18772af92821b503"  # frozen: v3.90.5
     hooks:
       - id: "trufflehog"
         alias: "secrets"

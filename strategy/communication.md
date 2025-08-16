@@ -65,6 +65,8 @@ Content should be related to the unit and posses the following traits:
 
 - many links to related resources
 
+- share many code snippets with brief descriptions/explanations
+
 - __all links should be markdown hidden__ EXCEPT:
 
     - links to the project repository (e.g. GitHub)
