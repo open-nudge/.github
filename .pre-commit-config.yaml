@@ -46,7 +46,7 @@ repos:
         require_serial: true
         always_run: true
   - repo: "https://github.com/trufflesecurity/trufflehog"
-    rev: "907ac64fd42b18dab2ceba2fda39834d3f8ba7e3"  # frozen: v3.90.1
+    rev: "0f58ae7c5036094a1e3e750d18772af92821b503"  # frozen: v3.90.5
     hooks:
       - id: "trufflehog"
         alias: "secrets"
@@ -90,7 +90,7 @@ repos:
           - "markdown"
         exclude: "^(DCO.md|LICENSE.md|LICENSES/.*)$"
   - repo: "https://github.com/jackdewinter/pymarkdown"
-    rev: "64f75ae7f8a6b1372c684abbe3301ed95aca267b"  # frozen: v0.9.31
+    rev: "e5c469050200cb90c1d3be8041bab39d69f0c9bb"  # frozen: v0.9.32
     hooks:
       - id: "pymarkdown"
         alias: "fix-markdown"
@@ -106,7 +106,7 @@ repos:
         additional_dependencies:
           - "application-properties"
   - repo: "https://github.com/jackdewinter/pymarkdown"
-    rev: "64f75ae7f8a6b1372c684abbe3301ed95aca267b"  # frozen: v0.9.31
+    rev: "e5c469050200cb90c1d3be8041bab39d69f0c9bb"  # frozen: v0.9.32
     hooks:
       - id: "pymarkdown"
         alias: "fix-markdown"
@@ -185,7 +185,7 @@ repos:
         verbose: true
         exclude: "^(DCO.md|LICENSE.md|LICENSES/.*)$"
   - repo: "https://github.com/editorconfig-checker/editorconfig-checker"
-    rev: "90a8919b913e39eef3a6a7011a4ecc67466a98d7"  # frozen: v3.3.0
+    rev: "ef081193195be5f2808fe560b36cfcc02b96548b"  # frozen: v3.4.0
     hooks:
       - id: "editorconfig-checker"
         alias: "editorconfig"
@@ -195,7 +195,7 @@ repos:
 
   # Pre-commit provided hooks
   - repo: "https://github.com/pre-commit/pre-commit-hooks"
-    rev: "cef0300fd0fc4d2a87a85fa2093c6b283ea36f4b"  # frozen: v5.0.0
+    rev: "3e8a8703264a2f4a69428a0aa4dcb512790b2c8c"  # frozen: v6.0.0
     hooks:
       - id: "no-commit-to-branch"
         alias: "main-branch-clean"
