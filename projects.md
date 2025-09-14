@@ -24,7 +24,9 @@ links to their respective repositories (if already released)
 - [opentemplate](#opentemplate)
 - [cogeol](#cogeol)
 - [loadfig](#loadfig)
-- [commition](#commition)
+- [comver](#comver)
+- [lintkit](#lintkit)
+- [pynudger](#pynudger)
 - [A](#a)
 - [B](#b)
 - [C](#c)
@@ -82,121 +84,133 @@ with no dependencies).
 > ![CAUTION]
 > Click [here](https://github.com/open-nudge/loadfig) to view the repository.
 
-## commition
-
-> ![CAUTION]
-> We are here currently!
+## comver
 
 Immutable commit-only based versioning for Python projects helping with
 [some behavioral pitfalls](https://hynek.me/articles/semver-will-not-save-you/) of
 [semantic versioning](https://semver.org/) scheme.
 
 > ![CAUTION]
-> Click here to view the repository.
+> Click [here](https://github.com/open-nudge/comver) to view the repository.
 
-## A
+## lintkit
 
-Unified logging library for CLI and production application.
+Library to create checkers/linters in minutes.
 
-## B
+> ![CAUTION]
+> Click [here](https://github.com/open-nudge/lintkit) to view the repository.
+
+## pynudger
+
+> ![CAUTION]
+> We are here currently!
 
 Opinionated linter checking best Python practices
 
-## C
+> ![CAUTION]
+> Click [here](https://github.com/open-nudge/pynudger) to view the repository.
+
+## A
 
 Opinionated linter checking best documentation practices
 
-## D
+## B
 
 Opinionated linter checking best GitHub Actions practices
 
-## E
-
-Library to create checkers/linters
-
-## F
+## C
 
 Linter verifying opennudge coherence
 
-## G
+## D
 
 Opinionated linter checking best PyTorch practices
 
-## H
+## E
+
+Unified logging library for CLI and production application.
+
+## F
 
 Small PyTorch library for memory-efficient optimization in PyTorch
 
-## I
+## G
 
 Layers shape inference in PyTorch
 
-## J
+## H
 
 Improved PyTorch datasets experience
 
-## K
+## I
 
 Library providing a unified metadata of a given PyTorch
 run (e.g. seed, sample order, configuration etc.)
 
-## L
+## J
 
 Raw data validation framework
 
-## M
+## K
 
 Reusable Python mixins for library creation
 
-## N
+## L
 
 Reusable Python structures for library creation
 
-## O
+## M
 
 Flexible and zero-abstraction prompt chaining library
 (batteries included!)
 
-## P
+## N
 
 Most pleasant configuration library in Python
 
-## Q
+## O
 
 Adapter library converting objects and types of pydantic-like libraries
 (e.g. [`sqlmodel`](https://github.com/fastapi/sqlmodel),
 [`strawberry-graphql`](https://github.com/strawberry-graphql/strawberry),
 [`polyfactory`](https://github.com/litestar-org/polyfactory)
 
-## R
+## P
 
 Attestation of `pytest` results (as described by
 [this predicate](https://github.com/in-toto/attestation/blob/main/spec/predicates/test-result.md))
 
-## S
+## Q
 
 `pydantic`-first data generation library similar to [`gentab`](https://github.com/omaralvarez/gentab)
 targeting complex column inter-dependence generation asynchronously (depends on `O`)
 
-## T
+## R
 
 Small tool (integrated with, e.g. `pre-commit`) indicating whether the change
 is breaking and is marked correctly as such in semantic versioning.
 
-## U
+## S
 
 Semantic harden-runner
 (see [harden-runner](https://github.com/step-security/harden-runner)) which
 allows to specify whole categories of enabled endpoints instead of
 individual ones.
 
-## V
+## T
 
 OSV-Scanner management tool reading `pyproject.toml` and excluding
 vulnerabilities (if dev dependencies only) automatically.
 
 Exception management which automates it and allows for scripting.
 
-## W
+## U
 
 Pyproject.toml separator which allows to hook different systems
+(e.g. `pre-commit`) on sub-file changes.
+
+## V
+
+(Direct) dependency linter which checks if the included
+dependencies are dependable and maintained.
 (e.g. `pre-commit`) on sub-file changes.
