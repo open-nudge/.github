@@ -48,7 +48,7 @@ security:
 projects:
   - changed-files:
       - any-glob-to-any-file:
-          - "projects.md"
+          - "PROJECTS.md"
 strategy:
   - changed-files:
       - any-glob-to-any-file:

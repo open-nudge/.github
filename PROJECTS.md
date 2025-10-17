@@ -27,6 +27,7 @@ links to their respective repositories (if already released)
 - [comver](#comver)
 - [lintkit](#lintkit)
 - [pynudger](#pynudger)
+- [pratidoc](#pratidoc)
 - [A](#a)
 - [B](#b)
 - [C](#c)
@@ -102,17 +103,24 @@ Library to create checkers/linters in minutes.
 
 ## pynudger
 
-> ![CAUTION]
-> We are here currently!
-
 Opinionated linter checking best Python practices
 
 > ![CAUTION]
 > Click [here](https://github.com/open-nudge/pynudger) to view the repository.
 
-## A
+## pratidoc
+
+> ![CAUTION]
+> We are here currently!
 
 Opinionated linter checking best documentation practices
+
+> ![CAUTION]
+> Click [here](https://github.com/open-nudge/pratidoc) to view the repository.
+
+## A
+
+Linter checking explanation is provided for every noqa (or similar directive).
 
 ## B
 
