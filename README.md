@@ -41,7 +41,7 @@ ______________________________________________________________________
 
 The following sections describing the `opennudge` are available:
 
-- [__projects__](./projects.md) - shortlist of projects
+- [__projects__](./PROJECTS.md) - shortlist of projects
     being a part of the open source portfolio (finished or in progress)
 - [__styleguide__](./styleguide/README.md) - documents outlining the general
     and language-specific programming styleguides

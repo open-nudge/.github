@@ -27,7 +27,7 @@ repos:
         entry: "conform enforce"
         pass_filenames: false
   - repo: "https://github.com/compilerla/conventional-pre-commit"
-    rev: "7c1022b54dcb1d1911e6c885089940e8499f0253"  # frozen: v4.2.0
+    rev: "8f2901e453e79dc8c524a8e43268721aa91931a6"  # frozen: v4.3.0
     hooks:
       - id: "conventional-pre-commit"
         name: "<<<CHECK>>> Commit"
@@ -46,7 +46,7 @@ repos:
         require_serial: true
         always_run: true
   - repo: "https://github.com/trufflesecurity/trufflehog"
-    rev: "466da5b0bb161144f6afca9afe5d57975828c410"  # frozen: v3.90.8
+    rev: "ad6fc8fb446b8fafbf7ea8193d2d6bfd42f45690"  # frozen: v3.90.11
     hooks:
       - id: "trufflehog"
         alias: "secrets"
@@ -153,7 +153,7 @@ repos:
         verbose: true
         exclude: "^(DCO.md|LICENSE.md|LICENSES/.*)$"
   - repo: "https://github.com/fsfe/reuse-tool"
-    rev: "8b8bbd873b2af6b2a2521ab2b1ff07b2ab624840"  # frozen: v5.1.1
+    rev: "9245cd26448e246cda84f70711cc9d5f970855d6"  # frozen: v6.1.2
     hooks:
       - id: "reuse"
         alias: "legal"
@@ -185,7 +185,7 @@ repos:
         verbose: true
         exclude: "^(DCO.md|LICENSE.md|LICENSES/.*)$"
   - repo: "https://github.com/editorconfig-checker/editorconfig-checker"
-    rev: "ef081193195be5f2808fe560b36cfcc02b96548b"  # frozen: v3.4.0
+    rev: "ef39e5f67e1af3a4acd695037912568cdcf7c42f"  # frozen: v3.4.1
     hooks:
       - id: "editorconfig-checker"
         alias: "editorconfig"
