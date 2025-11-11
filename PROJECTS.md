@@ -28,7 +28,7 @@ links to their respective repositories (if already released)
 - [lintkit](#lintkit)
 - [pynudger](#pynudger)
 - [pratidoc](#pratidoc)
-- [A](#a)
+- [noqaexplain](#noqaexplain)
 - [B](#b)
 - [C](#c)
 - [D](#d)
@@ -110,17 +110,21 @@ Opinionated linter checking best Python practices
 
 ## pratidoc
 
-> ![CAUTION]
-> We are here currently!
-
 Opinionated linter checking best documentation practices
 
 > ![CAUTION]
 > Click [here](https://github.com/open-nudge/pratidoc) to view the repository.
 
-## A
+## noqaexplain
+
+> ![CAUTION]
+> We are here currently!
 
 Linter checking explanation is provided for every noqa (or similar directive).
+
+> ![CAUTION]
+> Click [here](https://github.com/open-nudge/noqaexplain) to view
+> the repository.
 
 ## B
 
