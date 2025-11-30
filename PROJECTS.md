@@ -10,11 +10,11 @@ SPDX-License-Identifier: Apache-2.0
 This page outlines public projects, their brief descriptions, and
 links to their respective repositories (if already released)
 
-> ![NOTE]
+> [!NOTE]
 > Unreleased projects are left unnamed due to
 > [name squatting](https://en.wikipedia.org/wiki/Cybersquatting) concerns.
 
-> ![CAUTION]
+> [!CAUTION]
 > Unreleased projects might be moved around and other projects
 > may be added before them!
 
@@ -56,7 +56,7 @@ links to their respective repositories (if already released)
 Natural language documents about everything `opennudge` related like
 projects, plans, styleguides and many more.
 
-> ![CAUTION]
+> [!CAUTION]
 > Click [here](https://github.com/open-nudge/.github) to view the repository.
 
 ## opentemplate
@@ -64,7 +64,7 @@ projects, plans, styleguides and many more.
 Base template for every Python project at `opennudge`. Includes
 checks, automation, security best practices, and more out of the box.
 
-> ![CAUTION]
+> [!CAUTION]
 > Click [here](https://github.com/open-nudge/opentemplate) to view the repository.
 
 ## cogeol
@@ -73,7 +73,7 @@ Library to use with [cog](https://github.com/nedbat/cog) allowing users to
 control what Python versions (e.g. always support three latest Python
 versions and update them whenever necessary) their library use.
 
-> ![CAUTION]
+> [!CAUTION]
 > Click [here](https://github.com/open-nudge/cogeol) to view the repository.
 
 ## loadfig
@@ -82,7 +82,7 @@ Library to load configuration from `pyproject.toml` or `.<TOOL-NAME>.yml` files
 in a standardized way (including `git` repository finding
 with no dependencies).
 
-> ![CAUTION]
+> [!CAUTION]
 > Click [here](https://github.com/open-nudge/loadfig) to view the repository.
 
 ## comver
@@ -91,33 +91,33 @@ Immutable commit-only based versioning for Python projects helping with
 [some behavioral pitfalls](https://hynek.me/articles/semver-will-not-save-you/) of
 [semantic versioning](https://semver.org/) scheme.
 
-> ![CAUTION]
+> [!CAUTION]
 > Click [here](https://github.com/open-nudge/comver) to view the repository.
 
 ## lintkit
 
 Library to create checkers/linters in minutes.
 
-> ![CAUTION]
+> [!CAUTION]
 > Click [here](https://github.com/open-nudge/lintkit) to view the repository.
 
 ## pynudger
 
 Opinionated linter checking best Python practices
 
-> ![CAUTION]
+> [!CAUTION]
 > Click [here](https://github.com/open-nudge/pynudger) to view the repository.
 
 ## pratidoc
 
 Opinionated linter checking best documentation practices
 
-> ![CAUTION]
+> [!CAUTION]
 > Click [here](https://github.com/open-nudge/pratidoc) to view the repository.
 
 ## noqaexplain
 
-> ![CAUTION]
+> [!CAUTION]
 > We are here currently!
 
 Linter checking explanation is provided for every noqa (or similar directive).
@@ -132,7 +132,7 @@ Opinionated linter checking best GitHub Actions practices
 
 ## C
 
-Linter verifying opennudge coherence
+Linter verifying opentemplate coherence
 
 ## D
 
@@ -140,7 +140,10 @@ Opinionated linter checking best PyTorch practices
 
 ## E
 
-Unified logging library for CLI and production application.
+Unified logging library for CLI and production applications.
+
+> [!NOTE]
+> Might need additional conceptual work.
 
 ## F
 
