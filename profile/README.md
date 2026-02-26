@@ -13,9 +13,7 @@ SPDX-License-Identifier: Apache-2.0
 
 <div align="center">
 
-<a href="https://bsky.app/profile/opennudge.com">![bluesky](https://img.shields.io/badge/Bluesky-0285FF?logo=bluesky&logoColor=fff&style=for-the-badge)</a>
 <a href="https://opennudge.com">![website](https://img.shields.io/badge/website-D9D9D9?style=for-the-badge)</a>
-<a href="https://www.linkedin.com/company/opennudge">![linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)</a>
 
 </div>
 <p align="center">
