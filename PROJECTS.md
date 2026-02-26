@@ -29,6 +29,7 @@ links to their respective repositories (if already released)
 - [pynudger](#pynudger)
 - [pratidoc](#pratidoc)
 - [noqaexplain](#noqaexplain)
+- [A](#a)
 - [B](#b)
 - [C](#c)
 - [D](#d)
@@ -125,6 +126,11 @@ Linter checking explanation is provided for every noqa (or similar directive).
 > ![CAUTION]
 > Click [here](https://github.com/open-nudge/noqaexplain) to view
 > the repository.
+
+## A
+
+Automated dependencies management tool (e.g. loading from folder instead of specifying
+them in `setup.py` or `pyproject.toml`)
 
 ## B
 
