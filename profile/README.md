@@ -11,13 +11,8 @@ SPDX-License-Identifier: Apache-2.0
 </p>
 </h3>
 
-<div align="center">
-
-<a href="https://opennudge.com">![website](https://img.shields.io/badge/website-D9D9D9?style=for-the-badge)</a>
-
-</div>
 <p align="center">
-<code>opennudge</code> is an <b>open-source organization</b>
+<code><a href="https://opennudge.com">opennudge</a></code> is an <b>open-source organization</b>
 (check
 <a href="https://github.com/open-nudge/.github">this repository</a>
 for more info) that:
